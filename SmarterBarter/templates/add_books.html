@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
+        <title>ADD BOOKS</title>
+    </head>
+
+    <body>
+        <h1>FILL UP THE FORM BELOW</h1>
+        <div style="color:white;background-color:black">
+                <h1>Register</h1>
+                <p>
+                    You should totally sign up for our super awesome service.
+                    It's what all the cool kids are doing nowadays.
+                </p>
+               <form method="post" action='/addbooks/'>
+                    {% csrf_token %}
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="BOOK NAME" name='bookName' id='bookName' />
+                        </li>
+                        <li>
+                            <input type="text" placeholder="SUBJECT" name='subject' id= 'subject'/>
+                        </li>
+                         
+                         <li>
+                            <input type="number" placeholder="semester" name='semester' id='semester'/>
+                        </li>
+                         <li>
+                            <input type="number" placeholder="COPIES PRESENT CURRENTLY" name='copiesLeft' id='copiesLeft' />
+                        </li>
+                        
+
+                        <li>
+                            <input type="submit" value="ADD THE BOOK" class="button" />
+                        </li>
+                        
+                    </ul>
+                </form>
+
+            </div>
+            
+
+  
+
+
+    </body>
+</html>

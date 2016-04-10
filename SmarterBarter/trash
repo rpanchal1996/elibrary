@@ -1,0 +1,18 @@
+"""query_results=Book.objects.all()
+    l=''
+    n=''
+    temp=0
+    list_of_objects=[]
+    for i in query_results:
+        if(i.noOfRequests >= 0):
+            for j in range (0,len(i.currentRequests)):
+                
+                temp=temp+1
+                if (i.currentRequests[j]==' '):
+                    l=(str(str(i.currentRequests[j-temp+1:j]).strip()))
+                    n=i.bookName
+                    temp=0
+                    new=ApproveRequests.objects.create(bookName=n,requested_by=l)
+                    new.save()
+    newquery_results=ApproveRequests.objects.all()
+"""

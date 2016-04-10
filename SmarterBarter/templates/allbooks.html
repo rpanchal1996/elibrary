@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
+        <title>all books   </title>
+    </head>
+
+    <body>
+        <h1>LOOK AT ALL BOOKS</h1>
+
+        <table>
+    <tr>
+        <th>BOOK NAME</th>
+        
+        <th>AUTHOR NAME</th>
+        <th>SEMESTER</th>
+        
+    </tr>
+    {% for item in query_results %}
+    <tr> 
+        <td>{{ item.bookName }}</td>
+        
+        <td>{{ item.subject }}</td>
+        <td>{{item.semester}}</td>
+        <td> 
+            
+            {% if item.copiesLeft %}
+            <a href="/borrow/{{item.id}}">Borrow</a>
+            {% else %}
+            Sorry cannot borrow
+            {% endif %}
+
+
+        </td>
+        <td>
+                {% if superuser %}
+                <a href="/delete/{{item.id}}">DELETE THIS BOOK</a>
+                {% endif %}
+
+        </td>
+        <td>
+                {% if superuser %}
+                <a href="/delcpy/{{item.id}}">DELETE THIS COPY</a>
+                {% endif %}
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+    </body>
+</html>

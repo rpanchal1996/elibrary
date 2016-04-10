@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
+        <title>sab requests   </title>
+    </head>
+
+    <body>
+        <h1>LOOK AT ALL BOOKS</h1>
+
+  
+      <table>
+    <tr>
+        <th>BOOK NAME</th>
+        
+        <th>KISNE KIYA REQUEST</th>
+
+        <th> APPROVE </th>
+        
+    </tr>
+    {% for item in query_results %}
+    <tr> 
+        <td>{{ item.bookName }}</td>
+        
+        <td>{{ item.requested_by }}</td>
+        
+        <td><a href="/approved/{{item.id}}">click here to approve</a>
+
+       
+    </tr>
+    {% endfor %}
+</table>
+
+
+    </body>
+</html>

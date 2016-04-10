@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
+        <title>your homepage  </title>
+    </head>
+
+    <body>
+        <h1>welcome home</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
+        <title>all books   </title>
+    </head>
+
+    <body>
+        <h1>LOOK AT your approved requests lol</h1>
+
+        <table>
+    <tr>
+        <th>BOOK NAME</th>
+        
+       
+    </tr>
+    {% for item in query_results %}
+    <tr> 
+        <td>{{ item.bookName }}</td>
+        
+        
+
+        
+    </tr>
+    {% endfor %}
+</table>
+
+    </body>
+</html>
+
+    </body>
+</html>
